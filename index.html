@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-brand">CD</div>
+    <div class="navbar-nav">
+      <a href="#About">About</a>
+      <a href="#footer">Contact</a>
+    </div>
+  </div>
+
+  <!-- Button to toggle the side menu -->
+  <button onclick="toggleMenu()" id="menuBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Side menu overlay -->
+  <div class="sidemenu" id="sidemenu">
+    <div class="sidemenu-content">
+      <a href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Projects">Projects</a>
+      <a href="#footer">Contact</a>
+    </div>
+  </div>
+
+  <section class="parallax-section" id="Home">
+    <div class="parallax-content">
+      <p>Hi, I'm</p>
+      <h1>Chandra Sekhar</h1>
+      <p>Vizag, India.</p>
+    </div>
+    <div id="random-squares"></div>
+  </section>
+
+  <main>
+    <section class="About">
+      <!-- Info subsection -->
+      <div class="info" id="About">
+        <!-- Left column -->
+        <div class="column">
+          <div class="about_content">
+            <h2>Hi again</h2><br/>
+            <p>I am Chandra Sekhar Dasari. I am from Visakhapatnam. I am currently working as Digital Specialist Engineer
+              at Infosys Limited. I would like to create designs through which people can experience technology.<br/><br/>
+              User Experience is crucial for a company's success. How good the technology maybe if it is not usable then it fails its purpose.<br/>
+              So with my skills and passion along with a collaborative team I would like to create enjoyable User Experiences. <br/><br/>
+              Apart from work I like food, travelling, movies, cars(unfortunately I dont have one) and volleyball. <br/><br/>
+            </p>
+            <button type="submit">View Resume</button>
+          </div>
+        </div>
+        
+        <!-- Right column -->
+        <div class="column">
+          <img src="images/Me.jpg" alt="Image">
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+        <h1>"I wish to create designs through which people can experience Technology."</h1>
+    </section>
+
+    <section class="section" id="Projects">
+      <!-- Subsection -->
+      <div class="subsection">
+        <!-- Left column -->
+        <div class="column">
+          <div class="content">
+            <h2>TRACKTASK</h2>
+            <p>Subsection Subheading</p><br/>
+            <p>Subsection Text</p><br/><br/>
+            <button type="submit">View Casestudy</button>
+          </div>
+        </div>
+        
+        <!-- Right column -->
+        <div class="column">
+          <img src="images/Artkart mini.png" alt="Image">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <!-- Subsection -->
+      <div class="subsection">
+        <!-- Left column -->
+        <div class="column">
+          <div class="content">
+            <h2>TRACKTASK</h2>
+            <p>Subsection Subheading</p><br/>
+            <p>Subsection Text</p><br/><br/>
+            <button type="submit">View Casestudy</button>
+          </div>
+        </div>
+        
+        <!-- Right column -->
+        <div class="column">
+          <img src="images/Sizzles.png" alt="Image">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <!-- Subsection -->
+      <div class="subsection">
+        <!-- Left column -->
+        <div class="column">
+          <div class="content">
+            <h2>TRACKTASK</h2>
+            <p>Subsection Subheading</p><br/>
+            <p>Subsection Text</p><br/><br/>
+            <button type="submit">View Casestudy</button>
+          </div>
+        </div>
+        
+        <!-- Right column -->
+        <div class="column">
+          <img src="images/Artkart mini.png" alt="Image">
+        </div>
+      </div>
+    </section>
+
+    <section class="Connect">
+      <h2>Let's Connect</h2><br/>
+      <form action="mailto:dasarichandrasekhar@gmail.com" method="POST" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea><br/>
+        <button type="submit">Send Email</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id = "footer">
+    <ul>
+      <li><a href="linkedin.com"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="instagram.com"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="dribble.com"><i class="fab fa-dribbble"></i></a></li>
+    </ul><br/><br/><br/>
+    <p>&copy; 2023 CHANDRA SEKHAR DASARI. All rights reserved.</p>
+  </footer>
+
+  <button onclick="scrollToTop()" id="floatingBtn">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/d51c0aa142.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

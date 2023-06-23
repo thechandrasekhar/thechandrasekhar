@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* --------------------------- Navbar --------------------------- */
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 9999;
+  transform: translateY(0);
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+.navbar-brand {
+  float: left;
+  padding: 14px 16px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  float: right;
+}
+
+.navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-nav a:hover {
+  color: #007bff;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-hidden {
+  opacity: 0;
+}
+
+/* ----------------------- parallax-section --------------------------  */
+
+.parallax-section {
+  height: 100vh;
+  background-image: url('images/wallpaper.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-content {
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+}
+
+/* ----------------------- menuBtn --------------------------  */
+
+#menuBtn {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #171717;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#menuBtn:hover{
+  background-color: #007bff;
+}
+
+#menuBtn i {
+  font-size: 18px;
+}
+
+#menuBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ----------------------- Side menu overlay --------------------------  */
+
+.sidemenu {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: #007bff;
+  transition: right 0.3s ease-in-out;
+  z-index: 998;
+  overflow-y: auto;
+}
+
+.sidemenu.active {
+  right: 0;
+}
+
+.sidemenu-content {
+  padding: 150px 40px;
+}
+
+.sidemenu-content a {
+  font-size: 70px;
+  display: block;
+  padding: 10px 0;
+  color: #181818;
+  text-decoration: none;
+}
+
+.sidemenu-content a:hover {
+  color: #e8e8e8;
+}
+
+/* ---------------------- About section styles ----------------------- */
+
+.About {
+  height: 200vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(0deg, #000c28,  #000000);
+}
+
+/* ---------------------- Info subsection styles ------------------------ */
+.info {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.info .column {
+  flex: 1;
+  padding: 20px;
+}
+
+.info .column:nth-child(2) {
+  flex: 1;
+  padding: 20px;
+}
+
+.info img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----------------------- Content styles ----------------------- */
+.about_content {
+  text-align: left;
+}
+
+.about_content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #e8e8e8;
+}
+
+.about_content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.about_content button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.about_content button:hover {
+  background-color: #555;
+}
+
+/* ----------------------- Quote--------------------------  */
+
+.quote {
+  height: 100vh;
+  display: flex;
+  padding: 80px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ----------------------- Section --------------------------  */
+
+.section {
+  height: 100vh;
+  display: flex;
+  padding: 80px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* ------------------------ Subsection styles ----------------------- */
+
+.subsection {
+  max-width: 900px;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: #181818;
+  border-radius: 25px;
+}
+
+.subsection:hover {
+  max-width: 950px;
+  transition: max-width 0.3s ease-in-out;
+}
+
+.subsection .column {
+  flex: 1;
+  padding: 20px;
+}
+
+.subsection .column:nth-child(2) {
+  flex: 1;
+  padding: 20px;
+}
+
+.subsection img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------ Content styles ---------------------------- */
+.content {
+  text-align: left;
+  padding: 20px;
+}
+
+.content h2 {
+  color: #e8e8e8;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.content button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.content button:hover {
+  background-color: #555;
+}
+
+/* ----------------------- Button --------------------------  */
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
+/* ----------------------- Squares --------------------------  */
+
+.square {
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 0.5;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* ----------------------- Connect --------------------------  */
+
+.Connect {
+  padding: 100px;
+  text-align: center;
+  background-color: #242424;
+}
+
+.Connect h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.Connect input[type="text"],
+.Connect input[type="email"],
+.Connect textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px; /* Adjust the max-width value as per your preference */
+  min-width: 300px;
+  margin: 0 auto 20px; /* Center the input fields horizontally */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.Connect textarea {
+  height: 150px;
+  font-family: "Inter", sans-serif;
+}
+
+.Connect button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Connect button:hover {
+  background-color: #555;
+}
+
+/* ----------------------- footer --------------------------  */
+
+footer {
+  background-color: #101010;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+footer p {
+  margin: 10px 0 0;
+  font-size: 12px;
+}
+
+/* ----------------------- floatingBtn --------------------------  */
+
+#floatingBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 997;
+}
+
+#floatingBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ------------------------ scrollbar -------------------------- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 520px){
+  .navbar{
+    padding: 10px;
+    width: 100%;
+  }
+
+  .square{
+    visibility: hidden;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .sidemenu {
+    right: -300px;
+    width: 300px;
+  }
+
+  .sidemenu-content a {
+    font-size: 50px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section{
+    padding: 10px;
+  }
+
+  .subsection{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subsection .column{
+    padding: 15px;
+  }
+
+  .subsection img {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .content{
+    padding: 20px 10px;
+    min-width: 330px;
+  }
+
+  .content h1{
+    font-size: 20px;
+  }
+
+  .Connect{
+    padding: 50px 10px;
+  }
+
+  .Connect input[type="text"],
+  .Connect input[type="email"],
+  .Connect textarea {
+  max-width: 200px; /* Adjust the max-width value as per your preference */
+  }
+
+}
